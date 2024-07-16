@@ -1,3 +1,0 @@
-# special-barnacle
-
-Simple project 
