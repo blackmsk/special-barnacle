@@ -20,9 +20,9 @@ APP_ID = `"1:762524463226:web:70592dcdbcba88f5d94bc3"`
 .env로 파일명을 저장해서 Special-barnacle 폴더에 넣으시면 됩니다.     
 
 localhost에서 웹서버를 실행하는 법은 Powershell이나 VS Terminal 창으로 들어가서, Special-barnacle 폴더에 진입후,
-npm install로 node js를 설치후, 
+`npm install`로 node js를 설치후, 
   
-npm run dev 을 실행시키면 됩니다.  
+`npm run dev` 을 실행시키면 됩니다.  
 
 
 
