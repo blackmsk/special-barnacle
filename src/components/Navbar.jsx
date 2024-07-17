@@ -17,7 +17,7 @@ function Navbar() {
     {
       id: 1,
       headername: "Genres",
-      Name: "장르",
+      Name: "장르별",
       link: "/",
     },
     {
