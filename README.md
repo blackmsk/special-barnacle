@@ -10,9 +10,9 @@
 VITE_API_KEY = `"b454aa11fb4b5fc5b515d2e80a898a1c"`    
 VITE_FIREBASE_API_KEY = `"AIzaSyBuqEi678ID_T5D5owUIDakk99Tig5z-PY"`      
 VITE_FIREBASE_AUTH_DOMAIN = `"special-barnacle-50252.firebaseapp.com"`     
-VITE_FIREBASE_PROJECTID = `"special-barnacle-50252"`     
+VITE_FIREBASE_PROJECT_ID = `"special-barnacle-50252"`     
 VITE_FIREBASE_STORAGE_BUCKET = `"special-barnacle-50252.appspot.com"`     
-VITE_FIREBASE_MESAGING_SENDER_ID = `"762524463226"`     
+VITE_FIREBASE_MESSAGING_SENDER_ID = `"762524463226"`     
 APP_ID = `"1:762524463226:web:70592dcdbcba88f5d94bc3"`     
     
     
