@@ -53,7 +53,7 @@ export function MovieProvider({ children }) {
     setMovies(newMovies);
     setTotalPage(filteredGenre.total_pages);
     setLoader(false);
-    setHeader("장르");
+    setHeader("장르별");
   };
 
   const fetchSearch = async (query) => {
