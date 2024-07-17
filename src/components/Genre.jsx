@@ -32,7 +32,7 @@ function Genre() {
   return (
     <>
       <Helmet>
-        <title>하명이의 영화채널 | 장르</title>
+        <title>하명이의 영화채널 | 장르별</title>
       </Helmet>
 
       <div className="flex flex-wrap justify-center px-2">
