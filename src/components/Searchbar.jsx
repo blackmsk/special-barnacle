@@ -37,10 +37,17 @@ function Searchbar() {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>하명이의 영화</title>
       </Helmet>
 
       <div className="w-full bg-gradient-to-r from-orange-500 to-green-500 h-[5rem] md:h-[6rem]">
+=======
+        <title>하명이의 영화채널</title>
+      </Helmet>
+
+      <div className="w-full bg-gradient-to-r from-red-500 to-blue-500 h-[5rem] md:h-[6rem]">
+>>>>>>> 211c269 (special-barnacle)
         <div className="h-full w-full bg-black/30 flex justify-center items-center">
           <input
             type="search"

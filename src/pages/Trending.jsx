@@ -24,7 +24,11 @@ function Trending() {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>하명이의 영화 | 트랜딩</title>
+=======
+        <title>하명이의 영화채널 | 인기영화</title>
+>>>>>>> 211c269 (special-barnacle)
       </Helmet>
 
       <div className="w-full bg-[#10141e] md:p-10 mb-20 md:mb-0">

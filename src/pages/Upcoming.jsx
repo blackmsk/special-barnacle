@@ -24,7 +24,11 @@ function Upcoming() {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>하명이의 영화 | 출시예정</title>
+=======
+        <title>하명이의 영화채널 | 최근 개봉영화</title>
+>>>>>>> 211c269 (special-barnacle)
       </Helmet>
 
       <div className="w-full bg-[#10141e] md:p-10 mb-20 md:mb-0">

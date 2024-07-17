@@ -34,11 +34,31 @@ export function MovieProvider({ children }) {
 
   const filteredGenre = async () => {
     const data = await fetch(
+<<<<<<< HEAD
       // `https://api.themoviedb.org/3/discover/movie?with_genres=${activegenre}&api_key=${APIKEY}&with_origin_country=KR&page=${page}`
       `https://api.themoviedb.org/3/discover/movie?with_genres=${activegenre}&api_key=${APIKEY}&language=ko-KR&page=${page}`
     );
     const filteredGenre = await data.json();
     setMovies(movies.concat(filteredGenre.results)); // Concat new movies with previous movies, on genre change movies are reset to [] so that only movies of new genre will appear, check out useEffect on top for more information.
+=======
+      `https://api.themoviedb.org/3/discover/movie?with_genres=${activegenre}&api_key=${APIKEY}&language=ko-KR&page=${page}`
+    );
+    const filteredGenre = await data.json();
+
+    const newMovies = [...movies, ...filteredGenre.results].reduce(
+      (acc, current) => {
+        const x = acc.find((item) => item.id === current.id);
+        if (!x) {
+          return acc.concat([current]);
+        } else {
+          return acc;
+        }
+      },
+      []
+    );
+
+    setMovies(newMovies);
+>>>>>>> 211c269 (special-barnacle)
     setTotalPage(filteredGenre.total_pages);
     setLoader(false);
     setHeader("장르");
@@ -53,14 +73,35 @@ export function MovieProvider({ children }) {
     setLoader(false);
     setHeader(`Results for "${query}"`);
   };
+<<<<<<< HEAD
 
   const fetchAnime = async (query) => {
+=======
+  const fetchAnime = async () => {
+>>>>>>> 211c269 (special-barnacle)
     const data = await fetch(
       // `https://api.themoviedb.org/3/discover/movie?with_genres=${activegenre}&api_key=${APIKEY}&with_keywords=210024|287501&page=${page}`
       `https://api.themoviedb.org/3/discover/movie?with_genres=${activegenre}&api_key=${APIKEY}&language=ko-KR&with_keywords=210024|287501&page=${page}`
     );
     const filteredGenre = await data.json();
+<<<<<<< HEAD
     setMovies(movies.concat(filteredGenre.results)); // Concat new movies with previous movies, on genre change movies are reset to [] so that only movies of new genre will appear, check out useEffect on top for more information.
+=======
+
+    const newMovies = [...movies, ...filteredGenre.results].reduce(
+      (acc, current) => {
+        const x = acc.find((item) => item.id === current.id);
+        if (!x) {
+          return acc.concat([current]);
+        } else {
+          return acc;
+        }
+      },
+      []
+    );
+
+    setMovies(newMovies);
+>>>>>>> 211c269 (special-barnacle)
     setTotalPage(filteredGenre.total_pages);
     setLoader(false);
     setHeader("애니메이션");
@@ -73,17 +114,41 @@ export function MovieProvider({ children }) {
     const gen = await data.json();
     setGenres(gen.genres);
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 211c269 (special-barnacle)
   const fetchTrending = async () => {
     const data = await fetch(
       // `https://api.themoviedb.org/3/trending/movie/day?api_key=${APIKEY}&with_origin_country=KR&page=${page}`
       `https://api.themoviedb.org/3/trending/movie/day?api_key=${APIKEY}&language=ko-KR&with_origin_country=KR&page=${page}`
     );
     const trend = await data.json();
+<<<<<<< HEAD
     setTrending(trending.concat(trend.results));
     setTotalPage(trend.total_pages);
     setLoader(false);
     setHeader("트랜드 영화");
+=======
+
+    // 새로운 영화를 추가하되 중복을 제거
+    const newTrending = [...trending, ...trend.results].reduce(
+      (acc, current) => {
+        const x = acc.find((item) => item.id === current.id);
+        if (!x) {
+          return acc.concat([current]);
+        } else {
+          return acc;
+        }
+      },
+      []
+    );
+
+    setTrending(newTrending);
+    setTotalPage(trend.total_pages);
+    setLoader(false);
+    setHeader("인기 영화");
+>>>>>>> 211c269 (special-barnacle)
   };
 
   const fetchUpcoming = async () => {
@@ -91,10 +156,27 @@ export function MovieProvider({ children }) {
       `https://api.themoviedb.org/3/movie/upcoming?api_key=${APIKEY}&with_origin_country=KR&language=ko-KR&page=${page}`
     );
     const upc = await data.json();
+<<<<<<< HEAD
     setUpcoming(upcoming.concat(upc.results));
     setTotalPage(upc.total_pages);
     setLoader(false);
     setHeader("출시예정 영화");
+=======
+
+    const newUpcoming = [...upcoming, ...upc.results].reduce((acc, current) => {
+      const x = acc.find((item) => item.id === current.id);
+      if (!x) {
+        return acc.concat([current]);
+      } else {
+        return acc;
+      }
+    }, []);
+
+    setUpcoming(newUpcoming);
+    setTotalPage(upc.total_pages);
+    setLoader(false);
+    setHeader("최근 개봉영화");
+>>>>>>> 211c269 (special-barnacle)
   };
 
   // creat local storage

@@ -32,7 +32,11 @@ function Genre() {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>하명이의 영화추천 | 장르</title>
+=======
+        <title>하명이의 영화채널 | 장르</title>
+>>>>>>> 211c269 (special-barnacle)
       </Helmet>
 
       <div className="flex flex-wrap justify-center px-2">

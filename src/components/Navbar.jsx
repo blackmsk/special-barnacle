@@ -23,13 +23,21 @@ function Navbar() {
     {
       id: 2,
       headername: "Trending Movies",
+<<<<<<< HEAD
       Name: "트랜딩",
+=======
+      Name: "인기영화",
+>>>>>>> 211c269 (special-barnacle)
       link: "/trending",
     },
     {
       id: 3,
       headername: "Upcoming Movies",
+<<<<<<< HEAD
       Name: "출시예정",
+=======
+      Name: "최근 개봉영화",
+>>>>>>> 211c269 (special-barnacle)
       link: "/upcoming",
     },
     {
@@ -72,8 +80,13 @@ function Navbar() {
             onClick={() => setActivemobile(!activemobile)}
           >
             <img src={logo} alt="logo" className="w-60" />
+<<<<<<< HEAD
             <h1 className="text-gray-400/70 font-bold text-2xl text-center">
               하명이의 영화
+=======
+            <h1 className="text-gray-400/70 font-bold text-xl text-center">
+              하명이의 영화채널
+>>>>>>> 211c269 (special-barnacle)
             </h1>
           </Link>
         </motion.div>

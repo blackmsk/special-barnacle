@@ -25,7 +25,11 @@ const Player = () => {
     setHeader("Player");
   }, []);
 
+<<<<<<< HEAD
   document.title = `하명이의 영화 | ${moviedet.title}`;
+=======
+  document.title = `하명이의 영화채널 | ${moviedet.title}`;
+>>>>>>> 211c269 (special-barnacle)
 
   return (
     <>
