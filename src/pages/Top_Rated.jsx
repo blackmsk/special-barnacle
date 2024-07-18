@@ -11,7 +11,7 @@ function Top_Rated() {
   const { loader, page, setPage, fetchTop_Rated, top_rated, totalPage } =
     useContext(Contextpage);
 
-  useEffect(() => {
+  useEffect(() => {  
     setPage(1); // Reset Page to 1 on initial render.
   }, []);
 
