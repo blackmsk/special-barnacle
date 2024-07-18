@@ -1,21 +1,11 @@
-## Special-barnacle project(하명이의 영화채널)  
+## special-barnacle project(하명이의 영화채널)  
   
 일단 보수중이지만, 그래도 영화채널에 필요한 적절한 기능들은 넣었습니다. 
 추가적으로 원하시는 기능을 원하시면 연락바랍니다.
   
 ## <개발자분들께>  
 아.. 그리고 local에서 실행을 시키려면 .env파일이 필요하긴 한데,   
-메모장을 열고 아래의 내용을 작성한 뒤(그대로복사),  
-   
-VITE_API_KEY = `"b454aa11fb4b5fc5b515d2e80a898a1c"`    
-VITE_FIREBASE_API_KEY = `"AIzaSyBuqEi678ID_T5D5owUIDakk99Tig5z-PY"`      
-VITE_FIREBASE_AUTH_DOMAIN = `"special-barnacle-50252.firebaseapp.com"`     
-VITE_FIREBASE_PROJECT_ID = `"special-barnacle-50252"`     
-VITE_FIREBASE_STORAGE_BUCKET = `"special-barnacle-50252.appspot.com"`     
-VITE_FIREBASE_MESSAGING_SENDER_ID = `"762524463226"`     
-APP_ID = `"1:762524463226:web:70592dcdbcba88f5d94bc3"`     
-    
-    
+메모장을 열고 api키를 등록하시면 됩니다. 필요한 api카는 제게 요청 해 주세요!
 
 .env로 파일명을 저장해서 Special-barnacle 폴더에 넣으시면 됩니다.     
 
