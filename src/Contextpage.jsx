@@ -10,12 +10,13 @@ import { toast } from "react-toastify";
 const Contextpage = createContext();
 
 export function MovieProvider({ children }) {
-  const [header, setHeader] = useState("Trending");
+  const [header, setHeader] = useState("");
   const [totalPage, setTotalPage] = useState(null);
   const [movies, setMovies] = useState([]);
   const [searchedMovies, setSearchedMovies] = useState([]);
   const [trending, setTrending] = useState([]);
   const [upcoming, setUpcoming] = useState([]);
+  const [top_rated, setTop_Rated] = useState([]);
   const [page, setPage] = useState(1);
   const [activegenre, setActiveGenre] = useState(28);
   const [genres, setGenres] = useState([]);
@@ -58,7 +59,7 @@ export function MovieProvider({ children }) {
 
   const fetchSearch = async (query) => {
     const data = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&with_origin_country=KR&language=ko-KR&query=${query}&page=1&include_adult=true`
+      `https://api.themoviedb.org/3/search/multi?api_key=${APIKEY}&with_origin_country=KR&language=ko-KR&query=${query}&page=${page}&include_adult=true`
     );
     const searchmovies = await data.json();
     setSearchedMovies(searchmovies.results);
@@ -100,7 +101,7 @@ export function MovieProvider({ children }) {
   const fetchTrending = async () => {
     const data = await fetch(
       // `https://api.themoviedb.org/3/trending/movie/day?api_key=${APIKEY}&with_origin_country=KR&page=${page}`
-      `https://api.themoviedb.org/3/trending/movie/day?api_key=${APIKEY}&language=ko-KR&with_origin_country=KR&page=${page}`
+      `https://api.themoviedb.org/3/trending/movie/week?api_key=${APIKEY}&language=ko-KR&page=${page}`
     );
     const trend = await data.json();
 
@@ -142,6 +143,31 @@ export function MovieProvider({ children }) {
     setTotalPage(upc.total_pages);
     setLoader(false);
     setHeader("최근 개봉영화");
+  };
+
+  const fetchTop_Rated = async () => {
+    const data = await fetch(
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=${APIKEY}&language=ko-KR&page=${page}`
+    );
+    const top = await data.json();
+
+    // 새로운 영화를 추가하되 중복을 제거
+    const newTop_Rated = [...top_rated, ...top.results].reduce(
+      (acc, current) => {
+        const x = acc.find((item) => item.id === current.id);
+        if (!x) {
+          return acc.concat([current]);
+        } else {
+          return acc;
+        }
+      },
+      []
+    );
+
+    setTop_Rated(newTop_Rated);
+    setTotalPage(top.total_pages);
+    setLoader(false);
+    setHeader("명예의 전당");
   };
 
   // creat local storage
@@ -188,6 +214,8 @@ export function MovieProvider({ children }) {
         setLoader,
         fetchTrending,
         trending,
+        fetchTop_Rated,
+        top_rated,
         fetchUpcoming,
         upcoming,
         GetFavorite,

@@ -46,7 +46,7 @@ function Searchbar() {
             type="search"
             name="searchpanel"
             id="searchpanel"
-            placeholder="영화 검색"
+            placeholder="영화 또는 TV 검색"
             className="p-3 w-full mx-10 md:w-[40rem] rounded-xl outline-none"
             value={value}
             onChange={onChange}

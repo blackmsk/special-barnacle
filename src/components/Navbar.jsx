@@ -28,18 +28,24 @@ function Navbar() {
     },
     {
       id: 3,
+      headername: "Top Rated Movies",
+      Name: "명예의 전당",
+      link: "/top_rated",
+    },
+    {
+      id: 4,
       headername: "Upcoming Movies",
       Name: "최근 개봉영화",
       link: "/upcoming",
     },
     {
-      id: 4,
+      id: 5,
       headername: "Favorite Movies",
       Name: "즐겨찾기",
       link: "/favorite",
     },
     {
-      id: 5,
+      id: 6,
       headername: "Anime",
       Name: "애니메이션",
       link: "/anime",
