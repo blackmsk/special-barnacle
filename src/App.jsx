@@ -7,7 +7,7 @@ import Container from "./pages/Container";
 import Trending from "./pages/Trending";
 import Upcoming from "./pages/Upcoming";
 import Favorite from "./pages/Favoritepage";
-import Top_Rated from "./pages/top_rated";
+import Top_Rated from "./pages/Top_Rated";
 import { MovieProvider } from "./Contextpage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
